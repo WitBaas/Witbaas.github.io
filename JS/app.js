@@ -1,3 +1,74 @@
+// ^^^background changer^^^
+var images = [
+  '../img/land1.jpg',
+  '../img/land2.jpg',
+  '../img/land3.jpg',
+  '../img/land4.jpg',
+  '../img/land5.jpg',
+];
+
+var img = document.getElementById('bgimg');
+
+function displayImage(x) {
+  bgimg.style.backgroundImage = 'url(' + images[x] + ')';
+  // bgimg.innerText = images[x];
+}
+function startTimer() {
+  var x = 0;
+  displayImage(x);
+  setInterval(function () {
+    x = x + 1 >= images.length ? 0 : x + 1;
+    displayImage(x);
+  }, 15000);
+}
+// ^^^background changer^^^
+
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 4,
+  centeredSlides: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  preloadImages: true,
+  updateOnImagesReady: true,
+  observer: true,
+  observeParents: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    540: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    690: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 1,
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    5000: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop: true,
+  loopedSlides: 50,
+});
+
 function Home() {
   document.getElementById('logo').style.display = 'block';
   document.getElementById('maps_list').style.display = 'none';
@@ -8,6 +79,7 @@ function Home() {
   document.getElementById('Coyote').style.display = 'none';
   document.getElementById('Blacktail').style.display = 'none';
   document.getElementById('Whitetail').style.display = 'none';
+  document.getElementById('Black_Bear').style.display = 'none';
   document.getElementById('Roosevelt').style.display = 'none';
   document.getElementById('Moose').style.display = 'none';
   document.getElementById('CanadaGoose').style.display = 'none';
@@ -226,7 +298,7 @@ function Layton_info() {
   document.getElementById('VurhongaSavanna').style.display = 'none';
   document.getElementById('CuatroColinas').style.display = 'none';
   document.getElementById('SilverRidgePeaks_info').style.display = 'none';
-
+  swiper();
   // document.getElementById('animals_Hirschfelden').style.display = 'none';
 }
 
@@ -535,6 +607,7 @@ function Parque_Fernando_info() {
 }
 function Yukon_Valley_info() {
   document.getElementById('Yukon_Valley_info').style.display = 'block';
+  document.getElementById('CuatroColinas').style.display = 'none';
   document.getElementById('ParqueFernando').style.display = 'none';
   document.getElementById('VurhongaSavanna').style.display = 'none';
   document.getElementById('animals_Hirschfelden').style.display = 'none';

@@ -22,11 +22,15 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <title>The Hunter-Info</title>
   </head>
-  <body>
-    <div class="bg-img">
+  <body class="bg-img" onload="startTimer()" id="bgimg">
+    <div>
       <nav class="navbar navbar-expand-lg navbar-custom">
         <button
           class="navbar-toggler ml-auto"
@@ -69,6 +73,7 @@
                 <a
                   class="dropdown-item bar-col"
                   href="#"
+                  value="Generate"
                   onclick="Layton_info()"
                   >LayTon Lake</a
                 >
@@ -142,16 +147,87 @@
             alt="CoolBrand"
           />
         </div>
+        <!-- <div class="swiper-container a1">
+          <div class="swiper-wrapper text-center">
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="Mallard_animal()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/Mallard_.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="Jackrabbit_animal()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/Rabbit_1.jpg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="Coyote_animal()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/Coyote_1.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="Blacktail_info()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/Blacktail_1.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="Whitetail_info()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/Whitetail_1.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="BlackBear_info()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/Blackbear_1.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="RooseveltElk_info()">
+                <img
+                  class="tet responsive"
+                  src="/img/Icons/RoseveltElk_1.png"
+                  alt=""
+              /></a>
+            </div>
+            <div class="swiper-slide text-center">
+              <a href="#" onclick="Moose_info()">
+                <img class="tet responsive" src="/img/Icons/Moose_1.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div> -->
         <div class="container maps_list" id="maps_list">
           <div class="row row-cols-1 row-cols-md-3" id="row">
             <div class="card-deck">
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Layton Lake.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn d-flex justify-content-center"
+                    onclick="Layton_info()"
+                    ><img
+                      src="img/Layton Lake.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
                   <div class="card-body">
                     <h5 class="card-title">Layton Lake</h5>
 
@@ -162,25 +238,23 @@
                       is predominantly covered by spruce, larch and aspen
                       forests, rocky mountain slopes and marshlands in between
                     </p>
-
-                    <a
-                      href="#"
-                      type="button"
-                      class="btn d-flex justify-content-center"
-                      onclick="Layton_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- hirsh map -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Hirschfelden card icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="hirschfelden"
+                    onclick="Hirschfelden_info()"
+                    ><img
+                      src="img/Hirschfelden card icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
+
                   <div class="card-body">
                     <h5 class="card-title">Hirschfelden Hunting Reserve</h5>
                     <p class="card-text">
@@ -191,24 +265,22 @@
                       hunting grounds along mountain slopes and deep spruce
                       forests.
                     </p>
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="hirschfelden"
-                      onclick="Hirschfelden_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- Medved_Taiga maps card -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Medved Taiga icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="Medved_Taiga"
+                    onclick="MedvedTaiga_info()"
+                    ><img
+                      src="img/Medved Taiga icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
                   <div class="card-body">
                     <h5 class="card-title">Medved Taiga National Park</h5>
                     <p class="card-text">
@@ -219,24 +291,23 @@
                       to the test. Hunters looking for a variety of game will
                       not be disappointed.
                     </p>
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="Medved_Taiga"
-                      onclick="MedvedTaiga_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- Vurhonga Savanna card -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Vurhonga Savanna card icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="Medved_Taiga"
+                    onclick="Vurhonga_Savanna_info()"
+                    ><img
+                      src="img/Vurhonga Savanna card icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
+
                   <div class="card-body">
                     <h5 class="card-title">Vurhonga Savanna</h5>
                     <p class="card-text">
@@ -247,24 +318,22 @@
                       savanna, woodlands, fever tree forests, swamps and
                       scrublands.
                     </p>
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="Medved_Taiga"
-                      onclick="Vurhonga_Savanna_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- Parque Fernando card -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Parque Fernando icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="Medved_Taiga"
+                    onclick="Parque_Fernando_info()"
+                    ><img
+                      src="img/Parque Fernando icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
                   <div class="card-body">
                     <h5 class="card-title">Parque Fernando</h5>
                     <p class="card-text">
@@ -273,24 +342,22 @@
                       Fernando. Game imported from every continent thrive in
                       this land of plenty.
                     </p>
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="Medved_Taiga"
-                      onclick="Parque_Fernando_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- Yukon Valley card -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Yukon Valley card icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="Medved_Taiga"
+                    onclick="Yukon_Valley_info()"
+                    ><img
+                      src="img/Yukon Valley card icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
                   <div class="card-body">
                     <h5 class="card-title">Yukon Valley</h5>
                     <p class="card-text">
@@ -302,24 +369,23 @@
                       views of the crimson plains, flowing rivers and lush
                       forests. This is one of the better spots to hunt at.
                     </p>
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="Medved_Taiga"
-                      onclick="Yukon_Valley_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- Cuatro Colinas card -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Cuatro Colinas card icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="Medved_Taiga"
+                    onclick="Cuatro_Colinas_info()"
+                    ><img
+                      src="img/Cuatro Colinas card icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
+
                   <div class="card-body">
                     <h5 class="card-title">Cuatro Colinas</h5>
                     <p class="card-text">
@@ -330,25 +396,23 @@
                       scattered remnants of Spain's history welcome all with a
                       taste for adventure.
                     </p>
-
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="Medved_Taiga"
-                      onclick="Cuatro_Colinas_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
               <!-- Silver Ridge Peaks card -->
               <div class="col-md-4 col-sm-6 py-3">
                 <div class="card mb-4" style="max-width: 18rem;">
-                  <img
-                    src="img/Silver Ridge Peaks card icon.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    id="Medved_Taiga"
+                    onclick="Silver_Ridge_Peaks_info()"
+                    ><img
+                      src="img/Silver Ridge Peaks card icon.jpg"
+                      class="card-img-top"
+                      alt="..."
+                  /></a>
+
                   <div class="card-body">
                     <h5 class="card-title">Silver Ridge Peaks</h5>
                     <p class="card-text">
@@ -359,13 +423,6 @@
                       bust, against a breathtaking backdrop of glacial lakes,
                       iron-topped peaks and alpine hot springs.
                     </p>
-                    <a
-                      href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      id="Medved_Taiga"
-                      onclick="Silver_Ridge_Peaks_info()"
-                      >Map_info</a
-                    >
                   </div>
                 </div>
               </div>
@@ -375,135 +432,82 @@
         </div>
       </div>
       <!-- layton map + animal list -->
-      <div class="container Layton_Lake" id="animals_Layton">
+      <div class="Layton_Lake" id="animals_Layton">
         <h1 class="header">Layton Lake District</h1>
         <div class="map_img text-center">
-          <img class="img-responsive" src="/img/Layton_Lake_Map.png" alt="" />
+          <img class="img-responsive" src="/img/New_Project.jpg" alt="" />
         </div>
-        <div class="row row-cols-1 row-cols-md-3">
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Mallard icon.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Mallard</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Mallard_animal()"
-                  >INfo</a
-                >
+        <!-- icon list -->
+        <div class="mt-3" id="contentpage">
+          <div class="swiper-container">
+            <div class="swiper-wrapper text-center">
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="Mallard_animal()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Mallard_.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="Jackrabbit_animal()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Rabbit_1.jpg"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="Coyote_animal()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Coyote_1.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="Blacktail_info()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Blacktail_1.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="Whitetail_info()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Whitetail_1.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="BlackBear_info()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Blackbear_1.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="RooseveltElk_info()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/RoseveltElk_1.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide text-center">
+                <a href="#" onclick="Moose_info()">
+                  <img
+                    class="tet responsive"
+                    src="/img/Icons/Moose_1.png"
+                    alt=""
+                /></a>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Jackrabbit.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Jackrabbit</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Jackrabbit_animal()"
-                  >INfo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Coyote.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Coyote</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Coyote_animal()"
-                  >INfo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Blacktail.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Blacktail Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Blacktail_info()"
-                  >INfo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/whitetail.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Whitetail Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Whitetail_info()"
-                  >INfo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Black Bear.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Black Bear</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="BlackBear_info()"
-                  >INfo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/rose.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Roosevelt Elk</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RooseveltElk_info()"
-                  >INfo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 py-3">
-            <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/moos1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Moose</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Moose_info()"
-                  >INfo</a
-                >
-              </div>
-            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -1415,110 +1419,108 @@
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Mallard icon.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="CanadaGoose_info()"
+                ><img src="img/Mallard icon.png" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Canada Goose</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="CanadaGoose_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Red_fox.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RedFox_info()"
+                ><img
+                  src="img/Red_fox.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Red Fox</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RedFox_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/roe deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Roedeer_info()"
+                ><img src="img/roe deer.jpg" class="card-img-top" alt="..."
+              /></a>
               <div class="card-body">
                 <h5 class="card-title">Roe Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Roedeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Fallowdeer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="FallowDeer_info()"
+                ><img src="img/Fallowdeer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Fallow Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="FallowDeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Wild_boar.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="WildBoar_info()"
+                ><img src="img/Wild_boar.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Wild Boar</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="WildBoar_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/red deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RedDeer_info()"
+                ><img src="img/red deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Red Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RedDeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Bison E.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="EuropeanBison_info()"
+                ><img src="img/Bison E.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">European Bison</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="EuropeanBison_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -2397,99 +2399,97 @@
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Musk Deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MuskDeer_info()"
+                ><img src="img/Musk Deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Musk Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MuskDeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Jackrabbit.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="EurasianLynx_info()"
+                ><img
+                  src="img/Jackrabbit.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Eurasian Lynx</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="EurasianLynx_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Wild_boar.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="WildBoarMT_info()"
+                ><img src="img/Wild_boar.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Wild Boar</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="WildBoarMT_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Reindeer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Reindeer_info()"
+                ><img src="img/Reindeer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Reindeer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Reindeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Eurasian Brown Bear.jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="EurasianBrownBear_info()"
+                ><img
+                  src="img/Eurasian Brown Bear.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Eurasian Brown Bear</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="EurasianBrownBear_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/moos1.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MooseMT_info()"
+                ><img src="img/moos1.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Moose</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MooseMT_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -3243,144 +3243,142 @@
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Scrub_hare.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="ScrubHare_info()"
+                ><img src="img/Scrub_hare.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Scrub Hare</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="ScrubHare_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Side-Striped Jackal.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="SideStripedJackal_info()"
+                ><img
+                  src="img/Side-Striped Jackal.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Side-Striped Jackal</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="SideStripedJackal_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Springbok.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Springbok_info()"
+                ><img src="img/Springbok.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Springbok</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Springbok_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Warthog.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Warthog_info()"
+                ><img src="img/Warthog.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Warthog</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Warthog_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Lesser Kudu.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="LesserKudu_info()"
+                ><img src="img/Lesser Kudu.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Lesser Kudu</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="LesserKudu_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Blue Wildebeest.jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="BlueWildebeest_info()"
+                ><img
+                  src="img/Blue Wildebeest.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Blue Wildebeest</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="BlueWildebeest_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Gemsbok.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Gemsbok_info()"
+                ><img src="img/Gemsbok.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Gemsbok</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Gemsbok_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Cape Buffalo.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="CapeBuffalo_info()"
+                ><img src="img/Cape Buffalo.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Cape Buffalo</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="CapeBuffalo_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Lion.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Lion_info()"
+                ><img src="img/Lion.png" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Lion</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Lion_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -4489,115 +4487,124 @@
       <div class="container ParqueFernando" id="ParqueFernando">
         <h1 class="header">Parque Fernando</h1>
         <div class="map_img text-center">
-          <img class="img-responsive" src="/img/Layton_Lake_Map.png" alt="" />
+          <img
+            class="img-responsive"
+            src="/img/Parque Fernando animals.jpg"
+            alt=""
+          />
         </div>
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Cinnamon_teal.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="CinnamonTeal_info()"
+                ><img
+                  src="img/Cinnamon_teal.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Cinnamon Teal</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="CinnamonTeal_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Blackbuck.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Blackbuck_info()"
+                ><img
+                  src="img/Blackbuck.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Blackbuck</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Blackbuck_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Axis_deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="AxisDeer_info()"
+                ><img src="img/Axis_deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Axis Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="AxisDeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Puma.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Puma_info()"
+                ><img src="img/Puma.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Puma</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Puma_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Mule Deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MuleDeer_info()"
+                ><img src="img/Mule Deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Mule Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MuleDeer_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/red deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RedDeerPF_info()"
+                ><img src="img/red deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Red Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RedDeerPF_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Water Buffalo.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="WaterBuffalo_info()"
+                ><img
+                  src="img/Water Buffalo.png"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Water Buffalo</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="WaterBuffalo_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -5472,119 +5479,121 @@
       <div class="container Yukon_Valley_info" id="Yukon_Valley_info">
         <h1 class="header">Yukon Valley</h1>
         <div class="map_img text-center">
-          <img class="img-responsive" src="/img/Layton_Lake_Map.png" alt="" />
+          <img
+            class="img-responsive"
+            src="/img/Yukon Valley Animals.jpg"
+            alt=""
+          />
         </div>
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Harlequin_duck.jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="HarlequinDuck_info()"
+                ><img
+                  src="img/Harlequin_duck.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Harlequin Duck</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="HarlequinDuck_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Red_fox.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RedFoxYV_info()"
+                ><img
+                  src="img/Red_fox.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Red Fox</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RedFoxYV_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Gray Wolf.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="GrayWolf_info()"
+                ><img src="img/Gray Wolf.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Gray Wolf</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="GrayWolf_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Caribou.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Caribou_info()"
+                ><img src="img/Caribou.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Caribou</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Caribou_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Grizzly_Bear.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="GrizzlyBear_info()"
+                ><img src="img/Grizzly_Bear.png" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Grizzly Bear</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="GrizzlyBear_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/moos1.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MooseYV_info()"
+                ><img src="img/moos1.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Moose</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MooseYV_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Plains_bison.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="PlainsBison_info()"
+                ><img src="img/Plains_bison.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Plains Bison</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="PlainsBison_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -6460,163 +6469,163 @@
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/European_hare.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="EuropeanHare_info()"
+                ><img
+                  src="img/European_hare.png"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">European Hare</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="EuropeanHare_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/roe deer.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RoeDeerCC_info()"
+                ><img
+                  src="img/roe deer.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Roe Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RoeDeerCC_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Iberian_mouflon.png"
-                class="card-img-top"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="IberianMouflon_info()"
+                ><img
+                  src="img/Iberian_mouflon.png"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Iberian Mouflon</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="IberianMouflon_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Ronda_ibex.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RondaIbex_info()"
+                ><img src="img/Ronda_ibex.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Ronda Ibex</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RondaIbex_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Beceite_ibex.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="BeceiteIbex_info()"
+                ><img src="img/Beceite_ibex.png" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Beceite Ibex</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="BeceiteIbex_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Gredos_ibex.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="GredosIbex_info()"
+                ><img src="img/Gredos_ibex.png" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Gredos Ibex</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="GredosIbex_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/S.E. Spanish Ibex.jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="SpanishIbex_info()"
+                ><img
+                  src="img/S.E. Spanish Ibex.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">S.E. Spanish Ibex</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="SpanishIbex_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Wild_boar.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="WildboarCC_info()"
+                ><img src="img/Wild_boar.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Wild boar</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="WildboarCC_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Iberian_wolf.png" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="IberianWolf_info()"
+                ><img src="img/Iberian_wolf.png" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Iberian Wolf</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="IberianWolf_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/red deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RedDeerCC_info()"
+                ><img src="img/red deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Red Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RedDeerCC_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -7883,144 +7892,148 @@
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Turkey.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Turkey_info()"
+                ><img src="img/Turkey.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Turkey</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Turkey_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/Pronghorn.jpg"
-                class="card-img-top img-fluid"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="Pronghorn_info()"
+                ><img
+                  src="img/Pronghorn.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Pronghorn</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="Pronghorn_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Mountain Goat.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MountainGoat_info()"
+                ><img
+                  src="img/Mountain Goat.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Mountain Goat</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MountainGoat_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/BighornSheep.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="BighornSheep_info()"
+                ><img src="img/BighornSheep.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Bighorn Sheep</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="BighornSheep_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Mountain Lion.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MountainLion_info()"
+                ><img
+                  src="img/Mountain Lion.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Mountain Lion</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MountainLion_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Mule Deer.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="MuleDeerSR_info()"
+                ><img src="img/Mule Deer.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Mule Deer</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="MuleDeerSR_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Black Bear.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="BlackBearSR_info()"
+                ><img src="img/Black Bear.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Black Bear</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="BlackBearSR_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img
-                src="img/RockyMountainElk.jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="RockyMountainElk_info()"
+                ><img
+                  src="img/RockyMountainElk.jpg"
+                  class="card-img-top"
+                  alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Rocky Mountain Elk</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="RockyMountainElk_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 py-3">
             <div class="card mb-4" style="max-width: 18rem;">
-              <img src="img/Plains_bison.jpg" class="card-img-top" alt="..." />
+              <a
+                href="#"
+                class="btn btn-primary d-flex justify-content-center"
+                value="Generate"
+                onclick="PlainsBisonSR_info()"
+                ><img src="img/Plains_bison.jpg" class="card-img-top" alt="..."
+              /></a>
+
               <div class="card-body">
                 <h5 class="card-title">Plains Bison</h5>
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex justify-content-center"
-                  value="Generate"
-                  onclick="PlainsBisonSR_info()"
-                  >INfo</a
-                >
               </div>
             </div>
           </div>
@@ -9033,6 +9046,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/JS/app.js"></script>
   </body>
 </html>
