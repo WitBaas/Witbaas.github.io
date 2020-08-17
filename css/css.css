@@ -26,7 +26,14 @@
 .card-icon {
   text-align: center;
 }
-
+.banners {
+  width: 70% !important;
+  height: auto;
+}
+.banner {
+  width: 100% !important;
+  height: auto;
+}
 .navbar-custom {
   background-color: wheat;
   background-color: transparent;
@@ -345,7 +352,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: rgb(75, 73, 73);
+  /* background: rgb(75, 73, 73); */
 
   /* Center slide text vertically */
   display: -webkit-box;

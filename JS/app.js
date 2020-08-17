@@ -298,7 +298,6 @@ function Layton_info() {
   document.getElementById('VurhongaSavanna').style.display = 'none';
   document.getElementById('CuatroColinas').style.display = 'none';
   document.getElementById('SilverRidgePeaks_info').style.display = 'none';
-  swiper();
   // document.getElementById('animals_Hirschfelden').style.display = 'none';
 }
 
