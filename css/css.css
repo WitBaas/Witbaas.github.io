@@ -5,7 +5,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 1s ease-in-out;
+  transition: all 2s ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in;
 }
 
 .header {
@@ -126,6 +129,13 @@
   text-shadow: 10px;
   color: #5a3921;
 }
+.navbar {
+  height: 7vh !important;
+}
+#navbarNavAltMarkup {
+  font-size: x-large;
+}
+
 .Mallard,
 .Jackrabbit,
 .Coyote,
