@@ -1,4 +1,4 @@
-// ^^^background changer^^^
+
 var images = [
   '../img/land1.jpg',
   '../img/land2.jpg',
@@ -11,7 +11,7 @@ var img = document.getElementById('bgimg');
 
 function displayImage(x) {
   bgimg.style.backgroundImage = 'url(' + images[x] + ')';
-  // bgimg.innerText = images[x];
+  bgimg.innerText = images[x];
 }
 
 function startTimer() {
@@ -22,7 +22,7 @@ function startTimer() {
     displayImage(x);
   }, 15000);
 }
-// ^^^background changer^^^
+
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 4,
   centeredSlides: true,
