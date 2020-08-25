@@ -1,0 +1,606 @@
+#bgimg {
+  /* background-image: url('/img/land4.jpg'); */
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 2s ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in;
+}
+
+.header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+}
+#webapp_cover {
+  background-color: #5a3921 !important;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 39px;
+  margin: 0 auto;
+  transform: translateY(-50%) scale(2);
+}
+.card-icon {
+  text-align: center;
+}
+.banners {
+  width: 70% !important;
+  height: auto;
+}
+.banner {
+  width: 100% !important;
+  height: auto;
+}
+.navbar-custom {
+  background-color: wheat;
+  background-color: transparent;
+}
+.row {
+  text-align: center;
+}
+.navbar-custom .navbar-nav .nav-link {
+  color: black;
+}
+.navbar-toggler-icon {
+  padding-top: 2rem;
+  padding-right: 3rem;
+  /* margin-right: 0%; */
+  margin-left: 90%;
+  height: 50px;
+  width: 50px;
+  display: contents;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+/* .container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin: auto;
+  background-color: blueviolet;
+  color: blueviolet;
+} */
+.dropdown-menu {
+  background-color: #6b8c42;
+}
+.navbar-nav > li > .dropdown-menu a:link,
+.navbar-nav > li > .dropdown-menu a:hover {
+  background-color: transparent;
+}
+.col-md-4 {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  /* background-color: aqua; */
+}
+.mb-4 {
+  height: 100%;
+  border-color: #5a3921;
+}
+.card-body {
+  color: #fcffd1;
+  background-color: #486124;
+  border-radius: 25px !important;
+}
+.btn {
+  color: #ffffb5;
+  background-color: #6b8c42;
+  border-color: #5a3921;
+}
+.btn:hover {
+  color: #ffffb5;
+  background-color: #5a3921;
+  border-color: #ffffb5;
+}
+.map_img {
+  /* border: 20px solid transparent; */
+  /* display: block !important; */
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
+  margin-bottom: 5rem;
+  /* width: 100% !important; */
+  margin: 0 auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.card-img-top {
+  object-fit: cover;
+}
+.img {
+  width: 100%;
+  height: 10vw;
+  /* height: 40%; */
+  object-fit: cover;
+}
+.bigimg {
+  width: 100%;
+}
+.animal_name {
+  padding: 1rem;
+  text-align: center;
+  font-size: 7rem;
+  text-shadow: 10px;
+  color: #5a3921;
+}
+.navbar {
+  height: 7vh !important;
+}
+#navbarNavAltMarkup {
+  font-size: x-large;
+}
+
+.MedvedTaiga_info,
+.VurhongaSavanna,
+.ParqueFernando,
+.Yukon_Valley_info,
+.CuatroColinas,
+.SilverRidgePeaks_info,
+/* .animals_Layton, */
+.maps_list,
+.Hirschfelden,
+.Layton_Lake,
+#animals_card,
+#jumbotron,
+#gamepage {
+  display: none;
+}
+#menu_button {
+  color: #5a3921 !important;
+  width: 39px;
+  overflow: hidden;
+  height: 39px;
+}
+.animal_info {
+  text-align: center;
+}
+.bar-col {
+  color: #5a3921 !important;
+}
+
+#webapp_cover {
+  color: #5a3921;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 39px;
+  margin: 0 auto;
+  transform: translateY(-50%) scale(2);
+}
+
+#menu_button {
+  width: 39px;
+  overflow: hidden;
+}
+
+#menu_checkbox {
+  display: none;
+}
+
+#menu_label {
+  position: relative;
+  display: block;
+  height: 29px;
+  cursor: pointer;
+}
+
+#menu_label:before,
+#menu_label:after,
+#menu_text_bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #5a3921;
+}
+
+#menu_label:before,
+#menu_label:after {
+  content: '';
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+}
+
+#menu_label:before {
+  top: 0;
+}
+
+#menu_label:after {
+  top: 12px;
+}
+
+#menu_text_bar {
+  top: 24px;
+}
+
+#menu_text_bar:before {
+  content: 'MENU';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  color: #5a3921;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#menu_checkbox:checked + #menu_label:before {
+  left: -39px;
+}
+
+#menu_checkbox:checked + #menu_label:after {
+  left: 39px;
+}
+
+#menu_checkbox:checked + #menu_label #menu_text_bar:before {
+  animation: moveUpThenDown 0.8s ease 0.2s forwards,
+    shakeWhileMovingUp 0.8s ease 0.2s forwards,
+    shakeWhileMovingDown 0.2s ease 0.8s forwards;
+}
+
+@keyframes moveUpThenDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -27px;
+  }
+  100% {
+    top: -14px;
+  }
+}
+
+@keyframes shakeWhileMovingUp {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes shakeWhileMovingDown {
+  0% {
+    transform: rotateZ(0);
+  }
+  80% {
+    transform: rotateZ(3deg);
+  }
+  90% {
+    transform: rotateZ(-3deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+.tet {
+  width: 350px;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: rgb(75, 73, 73); */
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* .a1 {
+  display: none;
+} */
+.card,
+.col-md-4 {
+  border-radius: 28px !important;
+  /* border-color: 20px solid #5a3921 !important; */
+}
+.map_aTag {
+  margin-bottom: 15px !important;
+}
+#logo {
+  padding-top: 0px !important;
+}
+
+.droplist {
+  min-width: 30% !important;
+}
+.input-group,
+.mapSmsg {
+  width: 75% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 5% !important;
+}
+body > div.droplist.container > h4 {
+  text-align: center;
+}
+/* .container {
+  width: 70% !important;
+} */
+.A1img,
+.A2img,
+.A3img {
+  width: 250px !important;
+  height: auto;
+  /* display: block !important; */
+}
+.card {
+  background-color: #486124 !important;
+  color: #ffffb5;
+  /* margin-left: 10px !important;
+  margin-right: 10px !important; */
+  border: 10px solid #5a3921 !important;
+}
+
+.list-group,
+.list-group-item {
+  background-color: #486124 !important;
+}
+#gameboy {
+  width: 70% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#gameboy {
+  display: none;
+}
+.form-check-input {
+  position: unset !important;
+  margin-top: none !important;
+  margin-left: 0px !important;
+}
+
+/* clock style */
+#clockdiv {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #00bf96;
+  display: inline-block;
+}
+
+#clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816a;
+  display: inline-block;
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
+#timer {
+  background-color: cyan;
+}
+.democlass {
+  display: none;
+}
+.table {
+  background-color: #486124 !important;
+  color: #ffffb5 !important;
+  border: 10px solid #5a3921 !important;
+}
+.btnx {
+  margin-top: 7px !important;
+  margin-left: 11px !important;
+}
+.table td,
+.table th {
+  border-top: 0px solid black !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.form-control:focus,
+.custom-select:focus {
+  border: 3px solid #5a3921 !important;
+}
+input:focus,
+.custom-select:focus {
+  outline: none !important;
+  box-shadow: 0 0 1.5px 1px #5a3921 !important;
+}
+#tsbtn,
+.Btn {
+  background-color: #5a3921 !important ;
+  color: #ffffb5 !important;
+}
+.Btn:hover,
+#tsbtn:hover {
+  background-color: rgba(138, 92, 39, 0.733) !important;
+}
+#plcss {
+  border: 5px solid #5a3921 !important;
+  background-color: #486124;
+  height: fit-content;
+  margin: auto;
+  padding-top: 9px;
+  border: none;
+}
+#Tropscore1,
+#Tropscore2,
+#Tropscore3,
+#playerNinput {
+  background-color: rgb(185, 169, 151);
+  border-color: #5a3921 !important;
+}
+::placeholder {
+  color: #f8f8c2;
+}
+.mapNameV {
+  text-align: center;
+  text-decoration: underline !important;
+  color: #3d2717;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 90px;
+}
+select option:hover {
+  background: #666 !important;
+  color: #fff !important;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: none;
+}
+.custom-select {
+  height: 5vh !important;
+  font-size: 20px !important;
+  color: #5a3921 !important;
+}
+.display-4 {
+  font-size: 4.5rem !important;
+}
+.jumbotron {
+  background-color: #744f35 !important;
+  color: #ffffb5 !important;
+  padding-bottom: 1% !important;
+}
+.logojumb {
+  height: 220px !important;
+  width: auto !important;
+  margin-left: 80% !important;
+  margin-top: -35%;
+  margin-bottom: -200px;
+}
+@media screen and (max-width: 2950px) {
+  .A1col {
+    width: 22rem !important;
+  }
+  .gamecard {
+    width: 22rem !important;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .A1col {
+    width: 20rem !important;
+  }
+  .gamecard {
+    width: 20rem !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body > div.jumbotron.jumbotron-fluid > div > img {
+    display: none;
+  }
+  body > div.droplist.container {
+    min-width: 55% !important;
+  }
+  .A1col {
+    width: 18rem !important;
+  }
+  .gamecard {
+    width: 18rem !important;
+  }
+}
+@media screen and (max-width: 1050px) {
+  /* #gameboy {
+    width: 75% !important;
+  } */
+  .A1col {
+    max-width: 100% !important;
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23rem !important;
+  }
+  .gamecard {
+    width: 23rem !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  #gameboy {
+    width: 90% !important;
+  }
+  .A1col {
+    max-width: 100% !important;
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22rem !important;
+  }
+  .gamecard {
+    width: 22rem !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #gameboy {
+    width: 95% !important;
+  }
+  .A1col {
+    max-width: 100% !important;
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22rem;
+  }
+  .gamecard {
+    width: 22rem !important;
+  }
+}
+
+/* @media screen and (max-width: 900px) {
+  body > div.droplist.container {
+    display: none;
+  }
+} */
+#gameboy > div:nth-child(5) {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.playernamesty {
+  border: 2px solid #ffffb5 !important;
+  width: fit-content;
+  border-radius: 1%;
+}
