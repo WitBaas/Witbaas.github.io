@@ -10,7 +10,7 @@ function displayImage(x) {
   bgimg.style.backgroundImage = 'url(' + images[x] + ')';
 }
 
-function startTimer() {
+window.onload = function() {
   var x = 0;
   displayImage(x);
   setInterval(function () {
@@ -18,8 +18,6 @@ function startTimer() {
     displayImage(x);
   }, 15000);
 }
-startTimer();
-
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 4,
   centeredSlides: true,
